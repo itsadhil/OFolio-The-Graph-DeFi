@@ -1,0 +1,23 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .app-logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .search-bar {
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+  }
+  

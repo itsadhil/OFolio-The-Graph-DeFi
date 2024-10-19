@@ -1,0 +1,236 @@
+/* General styles */
+.main-ui-container {
+  background-color: #0d1117;
+  color: white;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-video {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+.search-container {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 800px;  /* Increase the maximum width */
+  padding: 15px;  /* Maintain the padding */
+  font-size: 18px;  /* Maintain the font size */
+  border-radius: 8px;
+  border: 2px solid #f97316;  /* Metamask orange border */
+  background-color: #000;  /* Black background */
+  color: #f97316;  /* Metamask orange text color */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar::placeholder {
+  color: #f97316;  /* Placeholder text in orange */
+}
+
+.search-bar:focus {
+  border-color: #ff7f50;  /* Change border color when focused */
+}
+
+/* Styling the Connect Wallet button */
+.connect-wallet-button {
+  padding: 10px 20px;
+  background-color: #f97316;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.connect-wallet-button:hover {
+  background-color: #ff7f50;
+}
+
+/* Centering Featured NFTs text */
+.featured-nfts h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center;  /* Center text */
+}
+
+/* Trending title with arrow animation */
+.trending-nfts h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: white;
+  display: inline-block;
+  position: relative;
+  padding-right: 40px; /* Space for the arrow */
+}
+
+/* Arrow animation next to Trending title */
+.trending-nfts h2::after {
+  content: '➔';  /* Add arrow */
+  font-size: 24px;
+  color: #f97316;
+  position: absolute;
+  right: 0;
+  top: 0;
+  animation: arrowMove 1s infinite;
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px); /* Move the arrow 5px to the right */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* NFT Card and Info */
+.nft-banner {
+  display: flex;
+  gap: 15px;
+  overflow: hidden;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nft-card {
+  background-color: #161b22;
+  padding: 0;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.nft-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.7);
+}
+
+.image-container {
+  position: relative;
+}
+
+.nft-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nft-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.floor-price {
+  margin: 0;
+  padding: 5px;
+  font-size: 16px;
+  color: #36cfc9;
+}
+
+/* Trending Table */
+.trending-table {
+  width: 100%;
+  text-align: left;
+  border-spacing: 10px 20px;
+}
+
+.trending-table th,
+.trending-table td {
+  padding: 10px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Fix for bored-ape-banner overflow issue */
+.bored-ape-banner {
+  width: 100%;
+  position: relative;
+  background-color: #0d1117;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.bored-ape-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+}
+
+.banner-text h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.visit-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f97316;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.visit-link:hover {
+  background-color: #ff7f50;
+}
