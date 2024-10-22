@@ -2,7 +2,7 @@
 
 OFolio is your one-stop decentralized finance (DeFi) portfolio dashboard, built to provide **real-time insights** into your assets, transactions, liquidity, staking, and much more. Whether you're a casual investor or a DeFi expert, OFolio brings clarity to your wallet, helping you monitor your entire DeFi portfolio in one seamless and intuitive interface. 🔥
 
-![OFolio Logo](./assets/ofoliologo.png)
+![OFolio Logo](defi-app/src/components/ofoliologo.png)
 
 ---
 
