@@ -1,70 +1,138 @@
+# 🚀 **OFolio Portfolio Dashboard** 🚀
 
-# OFolio Portfolio Dashboard
+OFolio is your one-stop decentralized finance (DeFi) portfolio dashboard, built to provide **real-time insights** into your assets, transactions, liquidity, staking, and much more. Whether you're a casual investor or a DeFi expert, OFolio brings clarity to your wallet, helping you monitor your entire DeFi portfolio in one seamless and intuitive interface. 🔥
 
-OFolio is a decentralized finance (DeFi) portfolio dashboard designed to give users a comprehensive view of their assets, transactions, staking, liquidity, and APR data. It is built using React.js on the frontend and Flask on the backend, integrating various blockchain APIs to fetch real-time wallet data.
+![OFolio Logo](./assets/ofoliologo.png)
 
-## Key Features
+---
 
-- **Portfolio Overview**: Displays PNL (Profit and Loss) and Net Worth of the user's wallet.
-- **Assets**: Provides detailed information on tokens, including balances and values.
-- **Transactions**: Shows transaction history with hash, from/to details, and value.
-- **Positions**: Lists DeFi positions with token balances and USD values.
-- **Liquidity**: Displays liquidity pool data, including token amounts and liquidity.
-- **Stakes**: Shows staking details like total shares and ETH transferred.
-- **APR Data**: Retrieves the latest Annual Percentage Rate (APR) from Dune Analytics.
+## 🌟 **Features At A Glance** 🌟
 
-## Tech Stack
+- **Portfolio Overview**: Track your **PNL** (Profit and Loss) and **Net Worth** at a glance. 📊
+- **Token Assets**: Get detailed insights into your tokens, including balances, USD values, and price charts. 💰
+- **Transaction History**: View a complete list of transactions, including transaction hashes, sender/receiver details, and value. 🔍
+- **DeFi Positions**: Track your DeFi positions and monitor the performance of your staked assets. 📈
+- **Liquidity Pools**: Dive deep into liquidity pool stats with detailed token amounts and liquidity information. 🌊
+- **Staking & APR Data**: Keep an eye on your staking shares, ETH transferred, and live **APR** data fetched from **Dune Analytics**. 💎
 
-- **Frontend**: React.js, styled-components, Recharts
-- **Backend**: Flask, Moralis API, The Graph, Dune Analytics
-- **APIs Used**: Moralis, The Graph, Dune Analytics, OpenSea
+---
 
-## Setup Instructions
+## 💻 **Tech Stack**
+
+### Frontend 🖥️
+- **React.js**: Dynamic user interface built with **React** and **styled-components** for custom design.
+- **Recharts**: Interactive charts to display **token balances**, **price trends**, and **PNL** performance.
+
+### Backend 🔧
+- **Flask**: Backend powered by Flask to fetch and process data from various blockchain APIs.
+- **Moralis**: Real-time blockchain data provider for wallet balances, transactions, and token data.
+- **The Graph**: Decentralized indexing protocol used for querying on-chain data.
+- **Dune Analytics**: Live **APR** data extraction from Dune's blockchain analytics.
+
+### APIs & Integrations 🌐
+- **Moralis API**: Fetches real-time wallet balances, transaction history, and token details.
+- **The Graph Protocol**: Aggregates data from DeFi protocols for liquidity and staking positions.
+- **Dune Analytics**: Provides real-time **APR** and DeFi analytics data for staked assets.
+- **OpenSea API**: Fetches NFT data for wallet assets and specific collections.
+
+---
+
+## ⚙️ **Setup Instructions**
 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/itsadhil/OFolio-The-Graph-DeFi
-   cd defi-app
+   cd OFolio-The-Graph-DeFi
    ```
 
-2. **Install Dependencies**:
+2. **Install Frontend Dependencies**:
+   Navigate to the `defi-app` folder and install the necessary dependencies:
    ```bash
+   cd defi-app
    npm install
    ```
 
-3. **Run the Frontend**:
+3. **Install Backend Dependencies**:
+   Navigate to the `pyapis` folder for the backend setup:
    ```bash
-   npm start
+   cd ../pyapis
+   pip install -r requirements.txt
    ```
 
-4. **Run the Backend**:
+4. **Run the Frontend**:
+   Start the React app by navigating back to the `defi-app` folder:
+   ```bash
+   cd ../defi-app
+   npm start
+   ```
+   The app will run on `http://localhost:3000`.
+
+5. **Run the Backend**:
+   Now run the Flask backend to serve the API endpoints:
    ```bash
    cd ../pyapis
    python commonapi.py
    ```
+   Flask will start running on `http://127.0.0.1:5000`.
 
-5. **Open the App**: Visit `http://localhost:3000` to view the dashboard.
+---
 
-## How to Use
+## 💡 **How to Use**
 
-1. **Connect Wallet**: Input your wallet address to display all portfolio-related data.
-2. **Navigate Sections**: Use the sidebar to switch between Portfolio, Assets, Transactions, Positions, Liquidity, and Stakes tabs.
-3. **APR Data**: View the latest APR data under the Stakes tab.
+1. **Connect Your Wallet**:
+   Enter your **wallet address** in the input field to load and view real-time DeFi portfolio data. 
 
-## API Endpoints
+2. **Explore Your Dashboard**:
+   Use the sidebar to navigate through different sections:
+   - **Portfolio**: Check your PNL and Net Worth.
+   - **Assets**: View token balances and USD values.
+   - **Transactions**: Monitor your transaction history.
+   - **Positions**: Track your DeFi staking and liquidity positions.
+   - **Liquidity**: Dive into detailed liquidity pool data.
+   - **Stakes & APR**: See staking shares and **APR** performance from Dune Analytics.
 
-- **POST /get-pnl**: Fetches profit and loss data.
-- **POST /get-net-worth**: Fetches net worth of the wallet.
-- **POST /get-token-balances**: Retrieves token balances.
-- **POST /get-transactions**: Fetches transaction history.
-- **POST /get-positions**: Retrieves DeFi positions.
-- **POST /get-liquidity**: Retrieves liquidity pool data.
-- **POST /get-stakes**: Fetches staking information.
-- **GET /get-apr**: Retrieves APR data from Dune Analytics.
+3. **Live APR**:
+   Under the **Stakes** tab, view real-time APR data using the latest results from **Dune Analytics**.
 
-## License
+---
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
+## 🛠️ **API Endpoints**
 
-This `README.md` now correctly reflects the steps to install dependencies and run the frontend and backend, along with the necessary `npm` commands under the `defi-app` directory.
+### 🤑 **Wallet & Portfolio Data**
+
+- **POST** `/get-pnl`: Fetches profit and loss data for the connected wallet.
+- **POST** `/get-net-worth`: Retrieves the net worth of the wallet.
+- **POST** `/get-token-balances`: Gets the current token balances for the wallet.
+- **POST** `/get-transactions`: Fetches the transaction history of the wallet.
+- **POST** `/get-positions`: Lists all DeFi staking positions.
+- **POST** `/get-liquidity`: Retrieves liquidity pool data for the wallet.
+
+### 💎 **Staking & APR Data**
+
+- **POST** `/get-stakes`: Fetches staking details, including ETH transferred and shares.
+- **GET** `/get-apr`: Retrieves the latest APR (Annual Percentage Rate) data from **Dune Analytics**.
+
+---
+
+## 🚀 **Future Improvements**
+
+- **Multi-chain Support**: Extend support to multiple blockchains such as **Binance Smart Chain**, **Polygon**, and **Avalanche**.
+- **NFT Portfolio**: View your entire NFT portfolio in one place, complete with real-time pricing and historical performance.
+- **Portfolio Analytics**: Advanced metrics and historical charts for a deeper understanding of your DeFi positions.
+- **Dark Mode**: A beautiful **dark mode** toggle to make the dashboard even easier on the eyes.
+
+---
+
+## 📜 **License**
+
+This project is licensed under the **MIT License**. Check the [LICENSE](./LICENSE) file for more details.
+
+---
+
+**OFolio** is your gateway to mastering your DeFi investments. Built to give you full control over your assets, we are committed to improving transparency and access in the world of decentralized finance. 💼💡
+
+> ✨ “The future of finance is DeFi, and the future of DeFi is in your hands with OFolio.” ✨
+
+---
+
+🔥 Made with 💙 by [itsadhil](https://github.com/itsadhil).
